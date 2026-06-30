@@ -1,0 +1,108 @@
+/* KingOfTime Quick Input - スタイル */
+
+/* 一括登録ボタン */
+.kot-bulk-submit-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.kot-bulk-submit-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-1px);
+}
+
+.kot-bulk-submit-btn:active {
+  transform: translateY(0);
+}
+
+.kot-bulk-submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* インライン入力フィールド */
+.kot-time-input {
+  width: 50px;
+  padding: 2px 4px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.kot-time-input:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+.kot-time-input.kot-modified {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+}
+
+.kot-time-input.kot-error {
+  border-color: #dc3545;
+  background-color: #ffe0e0;
+}
+
+.kot-time-input.kot-success {
+  border-color: #28a745;
+  background-color: #d4edda;
+}
+
+/* 入力セルのラッパー */
+.kot-input-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.kot-input-cell span {
+  font-size: 11px;
+  color: #666;
+}
+
+/* ステータス表示 */
+.kot-status-msg {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  z-index: 10000;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s;
+}
+
+.kot-status-msg.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.kot-status-msg.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.kot-status-msg.info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}

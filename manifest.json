@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "KingOfTime Quick Input",
+  "version": "1.0.0",
+  "description": "KING OF TIME の月次一覧画面から直接勤怠入力できるChrome拡張機能",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://s2.ta.kingoftime.jp/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
